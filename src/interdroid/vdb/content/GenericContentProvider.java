@@ -394,9 +394,10 @@ public abstract class GenericContentProvider extends ContentProvider {
 		// TODO: (emilian) default sort order
 
 		try {
-			String query = qb.buildQuery(DbUtil.quoteColumnNames(projection),
-					selection, selectionArgs, null, null, sortOrder, null);
-			LOG.debug("Querying with: {}", query);
+			// This logging makes 1.6 puke because it doesn't clear a buffer.
+//			String query = qb.buildQuery(DbUtil.quoteColumnNames(projection),
+//					selection, selectionArgs, null, null, sortOrder, null);
+//			LOG.debug("Querying with: {}", query);
 			LOG.debug("Projection: {}", DbUtil.quoteColumnNames(projection),
 					projection == null ? null : projection.length);
 			LOG.debug("Selection: {}", selection);
