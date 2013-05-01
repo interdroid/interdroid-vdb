@@ -53,6 +53,7 @@ import org.apache.avro.Schema;
 import org.eclipse.jgit.api.AddCommand;
 import org.eclipse.jgit.api.CommitCommand;
 import org.eclipse.jgit.api.Git;
+import org.eclipse.jgit.api.errors.GitAPIException;
 import org.eclipse.jgit.api.errors.NoFilepatternException;
 import org.eclipse.jgit.lib.AnyObjectId;
 import org.eclipse.jgit.lib.Constants;
@@ -261,6 +262,8 @@ public class VdbCheckoutImpl implements VdbCheckout {
 			add.call();
 		} catch (NoFilepatternException e) {
 			throw new IOException();
+		} catch (GitAPIException e) {
+		    throw new IOException();
 		}
 		PersonIdent author = new PersonIdent(authorName, authorEmail);
 		commit.setAuthor(author);

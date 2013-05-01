@@ -2,13 +2,16 @@
 <project name="vdb" default="jar">
 	<target name="jar">
 		<jar destfile="vdb.jar" basedir="bin/classes">
-		    <include name="**/EntityUriBuilder*.class"/>
+			<include name="**/*.class" />
+			<exclude name="**/BuildConfig.class" />
+			<exclude name="interdroid/vdb/R*.class" />
+			<!--<include name="**/EntityUriBuilder*.class"/>
 		    <include name="**/EntityUriMatcher*.class"/>
 		    <include name="**/Actions.class"/>
 		    <include name="**/Authority.class"/>
 		    <include name="**/AvroContentProviderProxy*.class"/>
 			<include name="**/AvroSchemaRegistrationHandler*.class"/>
-		    <include name="**/ContentChangeHandler*.class"/>
+		    <include name="**/ContentChangeHandler*.class"/>-->
 		</jar>
 	</target>
 	<target name="clean">

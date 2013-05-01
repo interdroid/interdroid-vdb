@@ -46,14 +46,15 @@ import java.net.SocketAddress;
 import java.util.List;
 import java.util.Map;
 
-import org.eclipse.jgit.JGitText;
 import org.eclipse.jgit.errors.RepositoryNotFoundException;
+import org.eclipse.jgit.internal.JGitText;
 import org.eclipse.jgit.lib.PersonIdent;
 import org.eclipse.jgit.lib.Repository;
 import org.eclipse.jgit.storage.pack.PackConfig;
 import org.eclipse.jgit.transport.PacketLineIn;
 import org.eclipse.jgit.transport.PacketLineOut;
 import org.eclipse.jgit.transport.ReceivePack;
+import org.eclipse.jgit.transport.ServiceMayNotContinueException;
 import org.eclipse.jgit.transport.UploadPack;
 import org.eclipse.jgit.transport.resolver.ReceivePackFactory;
 import org.eclipse.jgit.transport.resolver.RepositoryResolver;
@@ -640,6 +641,10 @@ public class SmartSocketsDaemon {
 			// for the remote client to know.
 			return null;
 		} catch (ServiceNotEnabledException e) {
+			// null signals it "wasn't found", which is all that is suitable
+			// for the remote client to know.
+			return null;
+		} catch (ServiceMayNotContinueException e) {
 			// null signals it "wasn't found", which is all that is suitable
 			// for the remote client to know.
 			return null;

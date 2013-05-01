@@ -49,16 +49,4 @@
 		<nature>org.eclipse.jdt.core.javanature</nature>
 		<nature>net.sf.eclipsecs.core.CheckstyleNature</nature>
 	</natures>
-	<linkedResources>
-		<link>
-			<name>org.eclipse.jgit_resources</name>
-			<type>2</type>
-			<locationURI>_android_org_eclipse_jgit_ef541d39/resources</locationURI>
-		</link>
-		<link>
-			<name>org.eclipse.jgit_src</name>
-			<type>2</type>
-			<locationURI>_android_org_eclipse_jgit_ef541d39/src</locationURI>
-		</link>
-	</linkedResources>
 </projectDescription>

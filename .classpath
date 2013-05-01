@@ -3,9 +3,6 @@
 	<classpathentry excluding="interdroid/vdb/persistence/ui/TestActivity.java" kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
-	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/org.eclipse.jgit"/>
-	<classpathentry combineaccessrules="false" exported="true" kind="src" path="/smartsockets"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.LIBRARIES"/>
-	<classpathentry exported="true" kind="src" path="/interdroid-util"/>
 	<classpathentry kind="output" path="bin/classes"/>
 </classpath>
